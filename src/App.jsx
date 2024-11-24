@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <ContactsProvider>
-        <div className=" h-screen w-full  flex md:flex-row flex-col justify-center ">
+        <div className=" h-screen w-full  flex md:flex-row flex-col  ">
 
           <Sidebar />
           <Outlet />

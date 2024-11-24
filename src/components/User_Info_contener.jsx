@@ -19,7 +19,7 @@ function TableUI() {
     } = useContactsModel();
 
     return (
-        <div className="h-screen flex flex-col md:pt-0  justify-start py-5 px-1 w-full bg-gray-100 shadow-md rounded-md">
+        <div className="h-screen flex flex-col md:pt-0  justify-start py-5 px-1 w-full bg-gray-200 shadow-md rounded-md">
             <h1 className="text-gray-900 text-2xl pl-5 font-bold pt-10 pb-5">User Management</h1>
 
             {/* Search Bar */}

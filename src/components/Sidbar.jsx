@@ -67,7 +67,7 @@ const Sidebar = () => {
                             onClick={() => window.innerWidth > 768 ? setIsOpen(true) : setIsOpen(false)}
                             key={index}
                             to={item.link}
-                            className="flex items-center gap-4 p-3 mx-2 rounded-md hover:bg-purple-600 transition-all"
+                            className=" transition-transform duration-300 hover:scale-105 hover:shadow-2xl rounded-2xl flex items-center gap-4 p-3 mx-2  hover:bg-purple-600 "
                         >
                             <span className="text-xl">{item.icon}</span>
                             {isOpen && <span className="font-medium">{item.name}</span>}
@@ -76,10 +76,10 @@ const Sidebar = () => {
                     ))}
                 </nav>
 
-                <div className={`mt-auto p-4 border-t border-gray-700 ${isOpen ? 'block' : 'hidden'} md:block`}>
+                <div className={` rounded-2xl shadow-inner shadow-gray-400 mt-auto p-4 border-t border-gray-700 ${isOpen ? 'block' : 'hidden'} md:block`}>
                     <Link
                         to="#"
-                        className="flex items-center gap-2 hover:bg-purple-600 p-2 rounded-md"
+                        className=" transition-transform duration-300 hover:scale-105 hover:shadow-2xl rounded-2xl  flex items-center gap-2 hover:bg-purple-600 p-2 "
                     >
                         <img
                             src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
