@@ -106,4 +106,10 @@ This project is licensed under the MIT License. Feel free to use and modify it a
 ---
 
 ## **Author**
-Created by [Your Name](https://github.com/your-username) for VRV Security's Frontend Developer Internship assignment.  
+Created by [Your Name](https://github.com/Ankit8239jangid) for VRV Security's Frontend Developer Internship assignment.  
+
+## **Contact Information**
+- **Email:** ankitjangid6375@gmail.com
+- **LinkedIn:** [Ankit Jangid](https://www.linkedin.com/in/ankit-jangid-417b902bb)
+- **Twitter:** [@AnkitJangid82](https://twitter.com/AnkitJangid82)
+- **Instagram:** [ankitjangid__001](https://www.instagram.com/ankitjangid__001/)
