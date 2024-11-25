@@ -5,6 +5,10 @@
 
 The dashboard provides an intuitive interface with user cards, a search bar, and options for CRUD operations on users and roles. It is built using **React** and styled with **Tailwind CSS** for responsiveness and modern aesthetics.
 
+## **Live Demo**
+
+Check out the live demo of the RBAC Dashboard [here](https://rbac-dashboard-self.vercel.app/).
+
 ---
 
 ## **Key Features**
@@ -78,16 +82,12 @@ The dashboard provides an intuitive interface with user cards, a search bar, and
 ---
 
 ## **Known Issues/Limitations**
-1. **Role Management:**
-   - Currently supports only predefined roles. Adding custom roles dynamically is under development.
 
-2. **Backend Integration:**
+1. **Backend Integration:**
    - Mock API calls simulate server interactions. Real backend integration is not implemented.
 
-3. **Advanced Filtering:**
-   - Filtering users based on multiple criteria is a planned feature but not implemented yet.
 
-4. **Validation:**
+2. **Validation:**
    - Basic form validation is implemented. Advanced validation (e.g., email format check) can be improved.
 
 --- 
