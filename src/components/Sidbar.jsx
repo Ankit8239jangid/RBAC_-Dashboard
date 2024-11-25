@@ -4,9 +4,10 @@ import { FaUser, FaCog, FaBars } from "react-icons/fa";
 import { MdDashboard } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { IoCloseSharp } from "react-icons/io5";
-
+import { useContactsModel } from "./context/Context";
 const Sidebar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const { theme } = useContactsModel();
 
     // handle the resize of the window to close the sidebar when the window is less than 768px 
     useEffect(() => {
@@ -52,16 +53,16 @@ const Sidebar = () => {
                             animate={{ rotate: isOpen ? 0 : 180 }}
                             transition={{ duration: 0.4 }}
                         >
-                            {isOpen ? <IoCloseSharp className={`${isOpen ? 'md:hidden' : ' block text-gray-900'}`} /> : <FaBars className={`${isOpen ? 'md:hidden' : ' block text-gray-900'}`} />}
+                            {isOpen  ? <IoCloseSharp className={`${isOpen ? 'md:hidden' : ' block text-gray-900'}`} /> : <FaBars className={`${isOpen ? 'md:hidden' : theme === 'dark' ? 'text-gray-100' : ' block text-gray-900'}`} />}
                         </motion.div>
                     </button>
                 </div>
 
                 <nav className={`flex flex-col space-y-4 mt-4 ${isOpen ? 'block' : 'hidden'} md:block`}>
                     {[
-                        { name: "Dashboard", icon: <MdDashboard/> , link: "/" },
-                        { name: "Users", icon: <FaUser />, link: "/users" },
-                        { name: "Settings", icon: <FaCog />, link: "/settings" },
+                        { name: "Dashboard", icon: <MdDashboard/> , link: "/dashboard" },
+                        { name: "Users", icon: <FaUser />, link: "users" },
+                        { name: "Settings", icon: <FaCog />, link: "settings" },
                     ].map((item, index) => (
                         <Link
                             onClick={() => window.innerWidth > 768 ? setIsOpen(true) : setIsOpen(false)}
@@ -88,7 +89,7 @@ const Sidebar = () => {
                         />
                         {isOpen && (
                             <div>
-                                <p className="font-medium">Eric Frusciante</p>
+                                <p className="font-medium">Ankit Jangid</p>
                                 <p className="text-sm text-gray-300">eric@frusciante.com</p>
                             </div>
                         )}

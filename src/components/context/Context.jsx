@@ -35,6 +35,7 @@ export const ContactsProvider = ({ children }) => {
     const [isFormOpen, setIsFormOpen] = useState(false);
     const [userSearch, setUserSearch] = useState('');
     const [dropdownState, setDropdownState] = useState({ action: null, role: null });
+    const [theme, setTheme] = useState('light');
 
 
 
@@ -54,6 +55,8 @@ export const ContactsProvider = ({ children }) => {
         user.name.toLowerCase().includes(userSearch.toLowerCase()) ||
         user.email.toLowerCase().includes(userSearch.toLowerCase())
     );
+
+    
 
 
 
@@ -95,6 +98,9 @@ export const ContactsProvider = ({ children }) => {
             setUsers(JSON.parse(storedUsers) || []);
         }
     }, []);
+
+
+
 
     // Add user handler
     const handleAddUser = (e) => {
@@ -138,6 +144,7 @@ export const ContactsProvider = ({ children }) => {
 
     };
 
+
     // Action handlers 
     const handleAction = (type, user) => {
         switch (type) {
@@ -174,6 +181,8 @@ export const ContactsProvider = ({ children }) => {
             handleActionWithDropdownReset,
             dropdownState,
             setDropdownState,
+            theme,
+            setTheme,
 
         }}>
             {children}
@@ -185,4 +194,3 @@ export const ContactsProvider = ({ children }) => {
 export const useContactsModel = () => {
     return useContext(ContactsContext);
 };
-

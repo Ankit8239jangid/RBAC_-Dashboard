@@ -1,15 +1,17 @@
 import { useContactsModel } from "./context/Context";
 
 function Dasbord() {
-  const { filteredUsers } = useContactsModel();
+  const { filteredUsers, theme } = useContactsModel();
+ 
 
   return (
-    <div className="cursor-pointer h-screen w-full flex justify-center overflow-y-auto md:pt-10 pt-14 pb-20 bg-gradient-to-r from-blue-800 via-purple-600 to-pink-800 p-10">
+    <div className={`cursor-pointer h-screen w-full flex justify-center overflow-y-auto md:pt-10 pt-14 pb-20 ${theme === 'dark' ? 'bg-gradient-to-r from-blue-800 via-purple-600 to-pink-800' : 'bg-gradient-to-r from-blue-200 via-purple-600 to-pink-200'} p-10`}>
       {/* Main Grid Container */}
+      
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 w-full max-w-6xl">
         {/* Card 1: Admin Dashboard */}
         <div className="h-auto md:h-48 w-full bg-gradient-to-r from-purple-500 to-indigo-500 p-6 rounded-2xl shadow-xl text-white flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-          <h2 className="text-2xl font-semibold">Admin Dashboard</h2>
+          <h2 className="text-2xl font-semibold">Welcome back, Ankit!</h2>
           <div className="flex items-center justify-between">
             <div>
               <h3 className="text-lg font-medium">Total Users</h3>

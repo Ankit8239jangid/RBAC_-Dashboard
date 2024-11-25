@@ -3,7 +3,7 @@ import "../index.css";
 
 import { useContactsModel } from "./context/Context";
 import UserProfile from "./UserProfile_card";
-function TableUI() {
+function User_Info_contener() {
     const {
         isFormOpen,
         setIsFormOpen,
@@ -11,19 +11,20 @@ function TableUI() {
         setUserSearch,
         newUser,
         setNewUser,
-
         handleInputChange,
         handleAddUser,
+        theme,  
 
 
     } = useContactsModel();
 
     return (
-        <div className="h-screen flex flex-col md:pt-0  justify-start py-5 px-1 w-full bg-gray-200 shadow-md rounded-md">
-            <h1 className="text-gray-900 text-2xl pl-5 font-bold pt-10 pb-5">User Management</h1>
+        <div className={`h-screen flex flex-col md:pt-0  justify-start py-5 px-1 w-full ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-200'} shadow-md rounded-md`}>
+            <h1 className={`text-gray-900 text-2xl pl-5 font-bold pt-10 pb-5 ${theme === 'dark' ? 'text-gray-100' : 'text-gray-900'}`}>User Management</h1>
+            <h1></h1>
 
             {/* Search Bar */}
-            <div className="flex rounded-full sm:flex-nowrap justify-between items-center gap-4 mb-4">
+            <div className="flex rounded-full sm:flex-nowrap justify-between items-center gap-4 ml-4 mb-4">
                 <input
                     type="text"
                     placeholder="Search users..."
@@ -113,16 +114,12 @@ function TableUI() {
                 </div>
             )}
 
-            {/* User Table */}
+            {/* User Profile Container its rendered the UserProfile component */}
             <div className="overflow-x-auto overflow-y-auto min-h-[40vh]">
-                <table className="w-full border-collapse border border-gray-300 text-left text-gray-900">
-
-
-                </table>
                 <UserProfile />
             </div>
         </div>
     );
 }
 
-export default TableUI;
+export default User_Info_contener;
